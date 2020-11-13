@@ -1,0 +1,17 @@
+version: '5'
+services:
+    lufi:
+        image: wrongt/lufi
+        environment:
+            - CONTACT=wrongt@ya.ru
+            - MAX_DELAY=60
+        ports:
+            - "8081:8081"
+        restart: always
+        volumes:
+            - db:/usr/lufi/data
+            - files:/usr/lufi/files
+        
+volumes:
+    db:
+    files:
